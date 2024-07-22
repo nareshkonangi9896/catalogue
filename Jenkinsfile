@@ -34,7 +34,7 @@ pipeline {
                 repository: 'catalogue',
                 credentialsId: 'nexus-auth',
                 artifacts: [
-                    [artifactId: 'dx',
+                    [artifactId: 'catalogue',
                     classifier: '',
                     file: 'catalogue.zip',
                     type: 'zip']
