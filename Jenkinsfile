@@ -20,7 +20,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls -ltr'
-                sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'
+                sh 'zip -r zzzzz.zip ./* --exclude=.git --exclude=.zip'
         }
         }
         stage('Publish artifact') {
