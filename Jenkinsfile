@@ -20,7 +20,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls -ltr'
-                sh 'zip -r zzz.zip ./* --exclude=.git --exclude=.zip'
+                sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'
         }
         }
         stage('Publish artifact') {
@@ -31,7 +31,7 @@ pipeline {
                 nexusUrl: '54.196.75.145:8081/',
                 groupId: 'com.roboshop',
                 version: '1.0.0',
-                repository: 'catalogue',
+                repository: 'dx',
                 credentialsId: 'nexus-auth',
                 artifacts: [
                     [artifactId: 'catalogue',
