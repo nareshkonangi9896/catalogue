@@ -11,10 +11,15 @@ pipeline {
                 echo 'unit testing is done here'
             }
         }
-        stage('sonar scan') {
+        // stage('sonar scan') {
+        //     steps {
+        //         sh 'ls -ltr'
+        //         sh 'sonar-scanner'
+        // }
+        // }
+        stage('Build') {
             steps {
                 sh 'ls -ltr'
-                sh 'sonar-scanner'
         }
         }
         stage('Deploy') {
