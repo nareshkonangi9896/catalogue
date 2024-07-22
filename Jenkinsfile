@@ -25,12 +25,6 @@ pipeline {
         }
         stage('Publish artifact') {
             steps {
-                sh 'ls -ltr'
-                sh 'zip -r ./* --exclude=.git --exclude=.zip'
-        }
-        }
-        stage('Publish artifact') {
-            steps {
                 nexusArtifactUploader(
                 nexusVersion: 'nexus3',
                 protocol: 'http',
