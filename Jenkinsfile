@@ -31,10 +31,10 @@ pipeline {
                 nexusUrl: '54.196.75.145:8081/',
                 groupId: 'com.roboshop',
                 version: '1.0.0',
-                repository: 'dx',
+                repository: 'catalogue',
                 credentialsId: 'nexus-auth',
                 artifacts: [
-                    [artifactId: 'catalogue',
+                    [artifactId: 'dx',
                     classifier: '',
                     file: 'catalogue.zip',
                     type: 'zip']
